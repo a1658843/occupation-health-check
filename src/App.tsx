@@ -4,10 +4,10 @@ import { occupations } from './data/occupations'
 
 function App() {
   const [selectedOccupationId, setSelectedOccupationId] = useState(
-    'software-engineer',
+    'accountant',
   )
   const [expandedExerciseName, setExpandedExerciseName] =
-    useState('Chin tucks')
+    useState('Chin Tucks')
 
   const selectedOccupation =
     occupations.find((occupation) => occupation.id === selectedOccupationId) ??

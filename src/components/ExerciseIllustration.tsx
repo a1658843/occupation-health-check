@@ -26,6 +26,7 @@ type IllustrationType =
   | 'hip-flexor-stretches'
   | 'calf-raises'
   | 'back-extensions'
+  | 'seated-back-stretch'
   | 'diaphragmatic-breathing'
   | 'calf-stretches'
   | 'scapular-squeezes'
@@ -41,20 +42,22 @@ type ExerciseIllustrationProps = {
 }
 
 const illustrationTypeByExerciseName: Record<string, IllustrationType> = {
-  'Chin tucks': 'chin-tucks',
-  'Wrist flexor stretches': 'wrist-flexor-stretches',
-  'Screen break eye focusing': 'eye-focusing',
-  'Hip flexor stretches': 'hip-flexor-stretches',
-  'Calf raises': 'calf-raises',
-  'Gentle back extensions': 'back-extensions',
-  'Diaphragmatic breathing': 'diaphragmatic-breathing',
-  'Standing calf stretches': 'calf-stretches',
-  'Scapular squeezes': 'scapular-squeezes',
-  'Forearm stretches': 'forearm-stretches',
-  'Hamstring stretches': 'hamstring-stretches',
-  'Shoulder rolls': 'shoulder-rolls',
-  'Seated spinal twists': 'spinal-twists',
-  'Ankle pumps': 'ankle-pumps',
+  'Chin Tucks': 'chin-tucks',
+  'Wrist Flexor Stretches': 'wrist-flexor-stretches',
+  'Screen Break Eye Focusing': 'eye-focusing',
+  '20-20-20 Eye Break': 'eye-focusing',
+  'Hip Flexor Stretches': 'hip-flexor-stretches',
+  'Calf Raises': 'calf-raises',
+  'Gentle Back Extensions': 'back-extensions',
+  'Seated Back Stretch': 'seated-back-stretch',
+  'Diaphragmatic Breathing': 'diaphragmatic-breathing',
+  'Standing Calf Stretches': 'calf-stretches',
+  'Scapular Squeezes': 'scapular-squeezes',
+  'Forearm Stretches': 'forearm-stretches',
+  'Hamstring Stretches': 'hamstring-stretches',
+  'Shoulder Rolls': 'shoulder-rolls',
+  'Seated Spinal Twists': 'spinal-twists',
+  'Ankle Pumps': 'ankle-pumps',
 }
 
 const iconMap: Record<IllustrationType, [LucideIcon, LucideIcon]> = {
@@ -64,6 +67,7 @@ const iconMap: Record<IllustrationType, [LucideIcon, LucideIcon]> = {
   'hip-flexor-stretches': [PersonStanding, StretchHorizontal],
   'calf-raises': [Footprints, ArrowUp],
   'back-extensions': [Bone, ArrowUp],
+  'seated-back-stretch': [Bone, StretchHorizontal],
   'diaphragmatic-breathing': [Wind, Activity],
   'calf-stretches': [Footprints, StretchHorizontal],
   'scapular-squeezes': [ScanFace, MoveHorizontal],

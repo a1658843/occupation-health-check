@@ -20,166 +20,56 @@ export type Occupation = {
 
 export const occupations: Occupation[] = [
   {
-    id: 'software-engineer',
-    name: 'Software Engineer',
+    id: 'accountant',
+    name: 'Accountant',
     shortDescription:
-      'Builds and maintains software, often spending long hours at a computer.',
+      'Works with financial records, spreadsheets, and reports, often spending long hours seated at a desk.',
     risks: [
       {
-        title: 'Neck Pain',
+        title: 'Neck Stiffness',
         description:
-          'Common neck and shoulder tension from prolonged sitting and screen focus.',
+          'Long periods of screen work and poor posture can lead to neck tension.',
+      },
+      {
+        title: 'Lower Back Pain',
+        description:
+          'Extended sitting may contribute to lower back discomfort.',
       },
       {
         title: 'Eye Strain',
         description:
-          'Visual fatigue from long periods of close screen work and reduced blinking.',
-      },
-      {
-        title: 'Wrist Discomfort',
-        description:
-          'Repetitive typing and mouse use can irritate the wrists and forearms.',
+          'Reviewing spreadsheets and reports for long periods can fatigue the eyes.',
       },
     ],
     exercises: [
       {
-        name: 'Chin tucks',
+        name: 'Chin Tucks',
         duration: '1 minute',
-        benefit: 'Helps reduce forward-head posture and neck tension.',
+        benefit: 'Helps improve posture and reduce neck stiffness.',
         instructions: [
-          'Sit tall with your shoulders relaxed.',
-          'Gently draw your chin straight back without tilting your head.',
-          'Hold for 3 seconds, then release and repeat.',
+          'Sit upright.',
+          'Pull your chin straight back.',
+          'Hold briefly and repeat.',
         ],
       },
       {
-        name: 'Wrist flexor stretches',
+        name: 'Seated Back Stretch',
         duration: '2 minutes',
-        benefit: 'Relieves tightness from typing and mouse use.',
+        benefit: 'Relieves tension in the lower back.',
         instructions: [
-          'Extend one arm forward with your palm facing up.',
-          'Use your other hand to gently pull the fingers back.',
-          'Hold for 20 seconds, then switch sides.',
+          'Sit upright.',
+          'Reach forward and gently round your back.',
+          'Hold for 20 seconds and repeat.',
         ],
       },
       {
-        name: 'Screen break eye focusing',
-        duration: '1 minute',
-        benefit: 'Reduces eye fatigue from sustained screen time.',
+        name: '20-20-20 Eye Break',
+        duration: '20 seconds',
+        benefit: 'Reduces eye fatigue from screen use.',
         instructions: [
-          'Look at an object about 20 feet away.',
-          'Keep your gaze relaxed for 20 seconds.',
-          'Blink slowly several times before returning to the screen.',
-        ],
-      },
-    ],
-  },
-  {
-    id: 'nurse',
-    name: 'Nurse',
-    shortDescription:
-      'Provides patient care in active, fast-paced clinical environments.',
-    risks: [
-      {
-        title: 'Lower Back Strain',
-        description:
-          'Patient lifting and awkward positioning can overload the lower back.',
-      },
-      {
-        title: 'Leg Fatigue',
-        description:
-          'Long shifts on hard floors can leave legs tired and circulation sluggish.',
-      },
-      {
-        title: 'Shoulder Tension',
-        description:
-          'Patient handling and repeated reaching can tighten the shoulders.',
-      },
-    ],
-    exercises: [
-      {
-        name: 'Hip flexor stretches',
-        duration: '2 minutes',
-        benefit: 'Eases hip tightness from walking, lifting, and long shifts.',
-        instructions: [
-          'Step one foot forward into a short lunge stance.',
-          'Keep your torso upright and gently shift weight forward.',
-          'Hold for 20 seconds, then switch sides.',
-        ],
-      },
-      {
-        name: 'Calf raises',
-        duration: '1 minute',
-        benefit: 'Supports circulation and reduces lower-leg fatigue.',
-        instructions: [
-          'Stand near a wall or counter for balance.',
-          'Rise onto the balls of your feet.',
-          'Lower slowly and repeat at a steady pace.',
-        ],
-      },
-      {
-        name: 'Gentle back extensions',
-        duration: '1 minute',
-        benefit: 'Helps counter forward bending and lower back strain.',
-        instructions: [
-          'Stand with your hands resting on your lower back.',
-          'Gently lean backward within a comfortable range.',
-          'Return to neutral and repeat slowly.',
-        ],
-      },
-    ],
-  },
-  {
-    id: 'teacher',
-    name: 'Teacher',
-    shortDescription:
-      'Guides student learning through instruction, planning, and classroom support.',
-    risks: [
-      {
-        title: 'Voice Strain',
-        description:
-          'Frequent speaking over classroom noise can fatigue the voice.',
-      },
-      {
-        title: 'Foot Fatigue',
-        description:
-          'Standing through lessons can create soreness in the feet and calves.',
-      },
-      {
-        title: 'Upper Back Tightness',
-        description:
-          'Desk work, grading, and leaning forward can tighten the upper back.',
-      },
-    ],
-    exercises: [
-      {
-        name: 'Diaphragmatic breathing',
-        duration: '2 minutes',
-        benefit: 'Supports voice control and reduces throat strain.',
-        instructions: [
-          'Sit or stand with one hand on your abdomen.',
-          'Inhale through your nose and let your abdomen expand.',
-          'Exhale slowly while keeping your shoulders relaxed.',
-        ],
-      },
-      {
-        name: 'Standing calf stretches',
-        duration: '2 minutes',
-        benefit: 'Relieves lower-leg tension from standing in class.',
-        instructions: [
-          'Place both hands against a wall.',
-          'Step one foot back and press the heel toward the floor.',
-          'Hold for 20 seconds, then switch sides.',
-        ],
-      },
-      {
-        name: 'Scapular squeezes',
-        duration: '1 minute',
-        benefit: 'Reduces upper back tightness from grading and desk work.',
-        instructions: [
-          'Sit or stand tall with arms relaxed.',
-          'Gently squeeze your shoulder blades together.',
-          'Hold for 3 seconds, release, and repeat.',
+          'Every 20 minutes.',
+          'Look at something 20 feet away.',
+          'For at least 20 seconds.',
         ],
       },
     ],
@@ -208,7 +98,7 @@ export const occupations: Occupation[] = [
     ],
     exercises: [
       {
-        name: 'Forearm stretches',
+        name: 'Forearm Stretches',
         duration: '2 minutes',
         benefit: 'Eases wrist and forearm strain from chopping and prep work.',
         instructions: [
@@ -218,7 +108,7 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Hamstring stretches',
+        name: 'Hamstring Stretches',
         duration: '2 minutes',
         benefit: 'Helps reduce lower back fatigue after standing.',
         instructions: [
@@ -228,13 +118,178 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Shoulder rolls',
+        name: 'Shoulder Rolls',
         duration: '1 minute',
         benefit: 'Releases shoulder tightness from repetitive kitchen tasks.',
         instructions: [
           'Stand tall with your arms relaxed at your sides.',
           'Roll your shoulders slowly backward five times.',
           'Roll them forward five times and repeat as needed.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'nurse',
+    name: 'Nurse',
+    shortDescription:
+      'Provides patient care in active, fast-paced clinical environments.',
+    risks: [
+      {
+        title: 'Lower Back Strain',
+        description:
+          'Patient lifting and awkward positioning can overload the lower back.',
+      },
+      {
+        title: 'Leg Fatigue',
+        description:
+          'Long shifts on hard floors can leave legs tired and circulation sluggish.',
+      },
+      {
+        title: 'Shoulder Tension',
+        description:
+          'Patient handling and repeated reaching can tighten the shoulders.',
+      },
+    ],
+    exercises: [
+      {
+        name: 'Hip Flexor Stretches',
+        duration: '2 minutes',
+        benefit: 'Eases hip tightness from walking, lifting, and long shifts.',
+        instructions: [
+          'Step one foot forward into a short lunge stance.',
+          'Keep your torso upright and gently shift weight forward.',
+          'Hold for 20 seconds, then switch sides.',
+        ],
+      },
+      {
+        name: 'Calf Raises',
+        duration: '1 minute',
+        benefit: 'Supports circulation and reduces lower-leg fatigue.',
+        instructions: [
+          'Stand near a wall or counter for balance.',
+          'Rise onto the balls of your feet.',
+          'Lower slowly and repeat at a steady pace.',
+        ],
+      },
+      {
+        name: 'Gentle Back Extensions',
+        duration: '1 minute',
+        benefit: 'Helps counter forward bending and lower back strain.',
+        instructions: [
+          'Stand with your hands resting on your lower back.',
+          'Gently lean backward within a comfortable range.',
+          'Return to neutral and repeat slowly.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'software-engineer',
+    name: 'Software Engineer',
+    shortDescription:
+      'Builds and maintains software, often spending long hours at a computer.',
+    risks: [
+      {
+        title: 'Neck Pain',
+        description:
+          'Common neck and shoulder tension from prolonged sitting and screen focus.',
+      },
+      {
+        title: 'Eye Strain',
+        description:
+          'Visual fatigue from long periods of close screen work and reduced blinking.',
+      },
+      {
+        title: 'Wrist Discomfort',
+        description:
+          'Repetitive typing and mouse use can irritate the wrists and forearms.',
+      },
+    ],
+    exercises: [
+      {
+        name: 'Chin Tucks',
+        duration: '1 minute',
+        benefit: 'Helps reduce forward-head posture and neck tension.',
+        instructions: [
+          'Sit tall with your shoulders relaxed.',
+          'Gently draw your chin straight back without tilting your head.',
+          'Hold for 3 seconds, then release and repeat.',
+        ],
+      },
+      {
+        name: 'Wrist Flexor Stretches',
+        duration: '2 minutes',
+        benefit: 'Relieves tightness from typing and mouse use.',
+        instructions: [
+          'Extend one arm forward with your palm facing up.',
+          'Use your other hand to gently pull the fingers back.',
+          'Hold for 20 seconds, then switch sides.',
+        ],
+      },
+      {
+        name: 'Screen Break Eye Focusing',
+        duration: '1 minute',
+        benefit: 'Reduces eye fatigue from sustained screen time.',
+        instructions: [
+          'Look at an object about 20 feet away.',
+          'Keep your gaze relaxed for 20 seconds.',
+          'Blink slowly several times before returning to the screen.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'teacher',
+    name: 'Teacher',
+    shortDescription:
+      'Guides student learning through instruction, planning, and classroom support.',
+    risks: [
+      {
+        title: 'Voice Strain',
+        description:
+          'Frequent speaking over classroom noise can fatigue the voice.',
+      },
+      {
+        title: 'Foot Fatigue',
+        description:
+          'Standing through lessons can create soreness in the feet and calves.',
+      },
+      {
+        title: 'Upper Back Tightness',
+        description:
+          'Desk work, grading, and leaning forward can tighten the upper back.',
+      },
+    ],
+    exercises: [
+      {
+        name: 'Diaphragmatic Breathing',
+        duration: '2 minutes',
+        benefit: 'Supports voice control and reduces throat strain.',
+        instructions: [
+          'Sit or stand with one hand on your abdomen.',
+          'Inhale through your nose and let your abdomen expand.',
+          'Exhale slowly while keeping your shoulders relaxed.',
+        ],
+      },
+      {
+        name: 'Standing Calf Stretches',
+        duration: '2 minutes',
+        benefit: 'Relieves lower-leg tension from standing in class.',
+        instructions: [
+          'Place both hands against a wall.',
+          'Step one foot back and press the heel toward the floor.',
+          'Hold for 20 seconds, then switch sides.',
+        ],
+      },
+      {
+        name: 'Scapular Squeezes',
+        duration: '1 minute',
+        benefit: 'Reduces upper back tightness from grading and desk work.',
+        instructions: [
+          'Sit or stand tall with arms relaxed.',
+          'Gently squeeze your shoulder blades together.',
+          'Hold for 3 seconds, release, and repeat.',
         ],
       },
     ],
@@ -263,7 +318,7 @@ export const occupations: Occupation[] = [
     ],
     exercises: [
       {
-        name: 'Seated spinal twists',
+        name: 'Seated Spinal Twists',
         duration: '1 minute',
         benefit: 'Improves back mobility after long periods of sitting.',
         instructions: [
@@ -273,7 +328,7 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Hip flexor stretches',
+        name: 'Hip Flexor Stretches',
         duration: '2 minutes',
         benefit: 'Reduces hip stiffness caused by extended driving.',
         instructions: [
@@ -283,7 +338,7 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Ankle pumps',
+        name: 'Ankle Pumps',
         duration: '1 minute',
         benefit: 'Encourages circulation in the lower legs.',
         instructions: [
