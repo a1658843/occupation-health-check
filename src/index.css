@@ -13,3 +13,10 @@ html {
 body {
   margin: 0;
 }
+
+.occupation-card-description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

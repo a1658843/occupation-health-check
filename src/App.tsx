@@ -14,24 +14,24 @@ function App() {
     occupations[0]
 
   return (
-    <main className="min-h-screen bg-slate-50 px-6 py-16 text-slate-950 sm:py-20">
+    <main className="min-h-screen bg-slate-50 px-6 py-10 text-slate-950 md:py-20">
       <section className="mx-auto max-w-3xl text-center">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700 md:mb-4">
           Workplace wellness
         </p>
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 className="text-3xl font-bold tracking-tight md:text-5xl">
           Occupation Health Check
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+        <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-slate-600 md:mt-6 md:text-lg md:leading-8">
           Discover common occupational health risks and preventive exercises.
         </p>
       </section>
 
-      <section className="mx-auto mt-14 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="mx-auto mt-8 grid max-w-6xl gap-4 sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
         {occupations.map((occupation) => (
           <button
             aria-pressed={occupation.id === selectedOccupationId}
-            className={`rounded-lg border bg-white p-6 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-teal-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 ${
+            className={`rounded-lg border bg-white p-4 text-left shadow-sm transition duration-200 md:p-6 md:hover:-translate-y-[3px] md:hover:border-teal-300 md:hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 ${
               occupation.id === selectedOccupationId
                 ? 'border-teal-600 ring-2 ring-teal-600 ring-offset-2'
                 : 'border-slate-200'
@@ -46,7 +46,7 @@ function App() {
             <h2 className="text-xl font-semibold tracking-tight text-slate-950">
               {occupation.name}
             </h2>
-            <p className="mt-3 leading-7 text-slate-600">
+            <p className="occupation-card-description mt-2 leading-7 text-slate-600 md:mt-3">
               {occupation.shortDescription}
             </p>
           </button>
