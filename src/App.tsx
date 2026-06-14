@@ -152,6 +152,24 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className="mx-auto mt-10 max-w-6xl rounded-lg border border-teal-200 bg-teal-50 p-6 text-center shadow-sm sm:p-8">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-950">
+          Don't see your occupation?
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">
+          Help us decide which occupations to add next. Suggest an occupation
+          and share common physical issues associated with it.
+        </p>
+        <a
+          className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-teal-700 px-5 py-3 font-semibold text-white shadow-sm transition hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-700 focus:ring-offset-2 sm:w-auto"
+          href="https://tally.so/r/xX60AG"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Suggest an Occupation
+        </a>
+      </section>
     </main>
   )
 }
