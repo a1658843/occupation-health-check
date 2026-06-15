@@ -17,6 +17,27 @@ const occupationHeroImages: Record<string, string> = {
   'Truck Driver': truckDriverImage,
 }
 
+const exerciseImageByName: Record<string, string> = {
+  'Chin Tucks': '/exercises/Chin Tucks.png',
+  'Seated Back Stretch': '/exercises/Seated Back Stretch.png',
+  'Wrist Stretch': '/exercises/Wrist Stretch.png',
+  'Wrist Stretches': '/exercises/Wrist Stretch.png',
+  '20-20-20 Eye Break': '/exercises/20-20-20 Eye Break.png',
+  'Standing Hip Stretch': '/exercises/Standing Hip Stretch.png',
+  'Calf Raises': '/exercises/Calf Raises.png',
+  'Gentle Back Extension': '/exercises/Gentle Back Extension.png',
+  'Gentle Back Extensions': '/exercises/Gentle Back Extension.png',
+  'Seated Back Twist': '/exercises/Seated Back Twist.png',
+  'Seated Back Twists': '/exercises/Seated Back Twist.png',
+  'Ankle Pumps': '/exercises/Ankle Pumps.png',
+  'Belly Breathing': '/exercises/Belly Breathing.png',
+  'Standing Calf Stretch': '/exercises/Standing Calf Stretch.png',
+  'Shoulder Blade Squeezes': '/exercises/Shoulder Blade Squeezes.png',
+  'Cross-Body Arm Stretch': '/exercises/Cross-Body Arm Stretch.png',
+  'Standing Hamstring Stretch': '/exercises/Standing Hamstring Stretch.png',
+  'Shoulder Rolls': '/exercises/Shoulder Rolls.png',
+}
+
 function App() {
   const [selectedOccupationId, setSelectedOccupationId] = useState<
     string | null
@@ -29,10 +50,19 @@ function App() {
   const selectedOccupation = occupations.find(
     (occupation) => occupation.id === selectedOccupationId,
   )
+  const selectedExercise = selectedOccupation?.exercises.find(
+    (exercise) => exercise.name === expandedExerciseName,
+  )
+  const selectedExerciseImage = selectedExercise
+    ? exerciseImageByName[selectedExercise.name]
+    : undefined
   const selectedOccupationImage = selectedOccupation
     ? occupationHeroImages[selectedOccupation.name] ?? softwareEngineerImage
     : null
   const normalizedSearchQuery = searchQuery.trim().toLowerCase()
+  const shouldShowSearchDropdown =
+    normalizedSearchQuery &&
+    searchQuery.trim() !== selectedOccupation?.name
   const matchingOccupations = normalizedSearchQuery
     ? occupations.filter((occupation) =>
         occupation.name.toLowerCase().includes(normalizedSearchQuery),
@@ -64,6 +94,7 @@ function App() {
   const handleOccupationSelect = (occupation: (typeof occupations)[number]) => {
     setSelectedOccupationId(occupation.id)
     setExpandedExerciseName('')
+    setSearchQuery(occupation.name)
   }
 
   useEffect(() => {
@@ -111,7 +142,7 @@ function App() {
             value={searchQuery}
           />
 
-          {normalizedSearchQuery && (
+          {shouldShowSearchDropdown && (
             <div className="absolute left-0 right-0 z-10 mt-2 overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg">
               {matchingOccupations.length > 0 ? (
                 matchingOccupations.map((occupation) => (
@@ -228,13 +259,13 @@ function App() {
               <div className="mt-3 space-y-2 md:mt-4 md:space-y-3">
                 {selectedOccupation.risks.map((risk) => (
                   <article
-                    className="rounded-lg border border-slate-200 bg-slate-50 p-3 md:p-4"
+                    className="rounded-lg border border-slate-200 bg-slate-50 p-3"
                     key={risk.title}
                   >
-                    <h4 className="font-semibold text-slate-950">
+                    <h4 className="font-semibold leading-6 text-slate-950">
                       {risk.title}
                     </h4>
-                    <p className="mt-1.5 text-sm leading-6 text-slate-600 md:mt-2 md:text-base md:leading-7">
+                    <p className="mt-0.5 text-sm leading-5 text-slate-600">
                       {risk.description}
                     </p>
                   </article>
@@ -268,48 +299,79 @@ function App() {
                       <span className="text-sm text-teal-700">
                         {exercise.name === expandedExerciseName
                           ? 'Hide'
-                          : 'View'}
+                          : 'Show'}
                       </span>
                     </button>
-
-                    {exercise.name === expandedExerciseName && (
-                      <div className="space-y-4 px-3 py-4 text-slate-700 sm:px-5 md:space-y-6 md:px-4 md:py-5">
-                        <ExerciseIllustration exerciseName={exercise.name} />
-
-                        <div className="rounded-lg bg-slate-50 p-3 md:p-4">
-                          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
-                            Step-by-step instructions
-                          </p>
-                          <ol className="mt-3 list-decimal space-y-2 pl-5">
-                            {exercise.instructions.map((instruction) => (
-                              <li key={instruction}>{instruction}</li>
-                            ))}
-                          </ol>
-                        </div>
-
-                        <div className="grid gap-3 md:gap-4 sm:grid-cols-[0.45fr_1fr]">
-                          <div className="rounded-lg bg-slate-50 p-3 md:p-4">
-                            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
-                              Duration
-                            </p>
-                            <p className="mt-2 font-medium text-slate-950">
-                              {exercise.duration}
-                            </p>
-                          </div>
-                          <div className="rounded-lg bg-slate-50 p-3 md:p-4">
-                            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
-                              Benefit
-                            </p>
-                            <p className="mt-2 leading-7">
-                              {exercise.benefit}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
                   </article>
                 ))}
               </div>
+            </div>
+          </div>
+
+          <div
+            className={`grid transition-all duration-300 ease-in-out ${
+              selectedExercise
+                ? 'mt-6 grid-rows-[1fr] opacity-100 md:mt-8'
+                : 'mt-0 grid-rows-[0fr] opacity-0'
+            }`}
+          >
+            <div className="overflow-hidden">
+              {selectedExercise && (
+                <section className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm md:p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
+                    Exercise Detail
+                  </p>
+                  <h3 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
+                    {selectedExercise.name}
+                  </h3>
+
+                  {selectedExerciseImage && (
+                    <img
+                      alt={`${selectedExercise.name} instructional infographic`}
+                      className="mx-auto mt-5 h-auto w-full max-w-[900px] rounded-xl border border-slate-200 shadow-sm md:mt-6"
+                      src={selectedExerciseImage}
+                    />
+                  )}
+
+                  <div className="mt-4 space-y-4 text-slate-700 md:mt-6 md:space-y-6">
+                    {!selectedExerciseImage && (
+                      <ExerciseIllustration
+                        exerciseName={selectedExercise.name}
+                      />
+                    )}
+
+                    <div className="rounded-lg bg-slate-50 p-3 md:p-4">
+                      <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
+                        Step-by-step instructions
+                      </p>
+                      <ol className="mt-3 list-decimal space-y-2 pl-5">
+                        {selectedExercise.instructions.map((instruction) => (
+                          <li key={instruction}>{instruction}</li>
+                        ))}
+                      </ol>
+                    </div>
+
+                    <div className="grid gap-3 sm:grid-cols-[0.45fr_1fr] md:gap-4">
+                      <div className="rounded-lg bg-slate-50 p-3 md:p-4">
+                        <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
+                          Duration
+                        </p>
+                        <p className="mt-2 font-medium text-slate-950">
+                          {selectedExercise.duration}
+                        </p>
+                      </div>
+                      <div className="rounded-lg bg-slate-50 p-3 md:p-4">
+                        <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
+                          Benefit
+                        </p>
+                        <p className="mt-2 leading-7">
+                          {selectedExercise.benefit}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              )}
             </div>
           </div>
           </section>

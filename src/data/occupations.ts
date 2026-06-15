@@ -31,17 +31,17 @@ export const occupations: Occupation[] = [
       {
         title: 'Neck Stiffness',
         description:
-          'Looking at a screen for a long time can make your neck feel tight.',
+          'Screens can make your neck tight.',
       },
       {
         title: 'Lower Back Pain',
         description:
-          'Sitting for a long time can make your lower back feel sore.',
+          'Sitting too long can make your lower back sore.',
       },
       {
         title: 'Tired Eyes',
         description:
-          'Reading spreadsheets and reports for hours can give you tired eyes.',
+          'Reports and spreadsheets can tire your eyes.',
       },
     ],
     exercises: [
@@ -68,11 +68,12 @@ export const occupations: Occupation[] = [
       {
         name: '20-20-20 Eye Break',
         duration: '20 seconds',
-        benefit: 'Helps tired eyes from screen time.',
+        benefit: 'Gives your eyes a short break from screen time.',
         instructions: [
-          'Every 20 minutes.',
-          'Look at something 20 feet away.',
-          'For at least 20 seconds.',
+          'Every 20 minutes, look away from your screen.',
+          'Focus on something about 20 feet away.',
+          'Keep looking for 20 seconds.',
+          'Blink a few times before returning to work.',
         ],
       },
     ],
@@ -86,22 +87,22 @@ export const occupations: Occupation[] = [
       {
         title: 'Sore Wrists',
         description:
-          'Chopping and stirring for hours can make your wrists and arms sore.',
+          'Chopping and stirring can make wrists sore.',
       },
       {
         title: 'Tired Lower Back',
         description:
-          'Standing for long shifts can make your lower back feel tired.',
+          'Long shifts can make your lower back tired.',
       },
       {
         title: 'Shoulder Tightness',
         description:
-          'Doing the same prep work for hours can make your shoulders tight.',
+          'Prep work can make your shoulders tight.',
       },
     ],
     exercises: [
       {
-        name: 'Arm Stretches',
+        name: 'Cross-Body Arm Stretch',
         duration: '2 minutes',
         benefit: 'Helps sore wrists and arms after chopping and prep work.',
         instructions: [
@@ -111,7 +112,7 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Hamstring Stretches',
+        name: 'Standing Hamstring Stretch',
         duration: '2 minutes',
         benefit: 'Helps your lower back feel better after standing.',
         instructions: [
@@ -141,22 +142,22 @@ export const occupations: Occupation[] = [
       {
         title: 'Sore Lower Back',
         description:
-          'Lifting and helping patients can make your lower back sore.',
+          'Lifting patients can make your back sore.',
       },
       {
         title: 'Tired Legs',
         description:
-          'Long shifts on hard floors can leave your legs tired.',
+          'Hard floors can make your legs tired.',
       },
       {
         title: 'Tight Shoulders',
         description:
-          'Helping patients and reaching often can make your shoulders tight.',
+          'Reaching often can make shoulders tight.',
       },
     ],
     exercises: [
       {
-        name: 'Hip Stretches',
+        name: 'Standing Hip Stretch',
         duration: '2 minutes',
         benefit: 'Helps loosen tight hips after walking and long shifts.',
         instructions: [
@@ -196,17 +197,17 @@ export const occupations: Occupation[] = [
       {
         title: 'Neck Pain',
         description:
-          'Sitting and looking at a screen for hours can make your neck sore.',
+          'Screen time can make your neck sore.',
       },
       {
         title: 'Tired Eyes',
         description:
-          'Long screen time and less blinking can lead to tired eyes.',
+          'Long screen time can tire your eyes.',
       },
       {
         title: 'Sore Wrists',
         description:
-          'Typing and using a mouse for hours can make your wrists sore.',
+          'Typing and mouse work can make wrists sore.',
       },
     ],
     exercises: [
@@ -231,13 +232,14 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Screen Break Eye Focusing',
-        duration: '1 minute',
-        benefit: 'Helps tired eyes from long screen time.',
+        name: '20-20-20 Eye Break',
+        duration: '20 seconds',
+        benefit: 'Gives your eyes a short break from screen time.',
         instructions: [
-          'Look at an object about 20 feet away.',
-          'Look at it calmly for 20 seconds.',
-          'Blink slowly several times before returning to the screen.',
+          'Every 20 minutes, look away from your screen.',
+          'Focus on something about 20 feet away.',
+          'Keep looking for 20 seconds.',
+          'Blink a few times before returning to work.',
         ],
       },
     ],
@@ -251,17 +253,17 @@ export const occupations: Occupation[] = [
       {
         title: 'Tired Voice',
         description:
-          'Talking for long periods can make your voice tired.',
+          'Talking all day can tire your voice.',
       },
       {
         title: 'Sore Feet',
         description:
-          'Standing during lessons can make your feet and calves sore.',
+          'Standing can make feet and calves sore.',
       },
       {
         title: 'Upper Back Tightness',
         description:
-          'Grading and leaning forward can make your upper back tight.',
+          'Leaning forward can tighten your upper back.',
       },
     ],
     exercises: [
@@ -276,7 +278,7 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Standing Calf Stretches',
+        name: 'Standing Calf Stretch',
         duration: '2 minutes',
         benefit: 'Helps sore lower legs from standing.',
         instructions: [
@@ -306,17 +308,17 @@ export const occupations: Occupation[] = [
       {
         title: 'Hip Stiffness',
         description:
-          'Sitting for a long time can make your hips feel stiff.',
+          'Long drives can make hips stiff.',
       },
       {
         title: 'Sore Lower Back',
         description:
-          'Driving for hours can make your lower back sore.',
+          'Driving for hours can make your back sore.',
       },
       {
         title: 'Heavy Legs',
         description:
-          'Sitting for hours can make your legs feel heavy or tired.',
+          'Sitting can make your legs heavy.',
       },
     ],
     exercises: [
@@ -331,7 +333,7 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Hip Stretches',
+        name: 'Standing Hip Stretch',
         duration: '2 minutes',
         benefit: 'Helps loosen stiff hips after driving.',
         instructions: [
