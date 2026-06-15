@@ -22,8 +22,7 @@ export const occupations: Occupation[] = [
   {
     id: 'accountant',
     name: 'Accountant',
-    shortDescription:
-      'Works with financial records, spreadsheets, and reports, often spending long hours seated at a desk.',
+    shortDescription: 'Desk-based financial work with reports and spreadsheets.',
     risks: [
       {
         title: 'Neck Stiffness',
@@ -77,8 +76,7 @@ export const occupations: Occupation[] = [
   {
     id: 'chef',
     name: 'Chef',
-    shortDescription:
-      'Prepares food in busy kitchens with repetitive tasks and long periods standing.',
+    shortDescription: 'Kitchen work with standing and repetitive tasks.',
     risks: [
       {
         title: 'Wrist Strain',
@@ -132,8 +130,7 @@ export const occupations: Occupation[] = [
   {
     id: 'nurse',
     name: 'Nurse',
-    shortDescription:
-      'Provides patient care in active, fast-paced clinical environments.',
+    shortDescription: 'Clinical work with long shifts and patient care.',
     risks: [
       {
         title: 'Lower Back Strain',
@@ -187,8 +184,7 @@ export const occupations: Occupation[] = [
   {
     id: 'software-engineer',
     name: 'Software Engineer',
-    shortDescription:
-      'Builds and maintains software, often spending long hours at a computer.',
+    shortDescription: 'Desk-based computer work for long hours.',
     risks: [
       {
         title: 'Neck Pain',
@@ -242,8 +238,7 @@ export const occupations: Occupation[] = [
   {
     id: 'teacher',
     name: 'Teacher',
-    shortDescription:
-      'Guides student learning through instruction, planning, and classroom support.',
+    shortDescription: 'Classroom work with standing, speaking, and planning.',
     risks: [
       {
         title: 'Voice Strain',
@@ -297,8 +292,7 @@ export const occupations: Occupation[] = [
   {
     id: 'truck-driver',
     name: 'Truck Driver',
-    shortDescription:
-      'Transports goods over long distances while seated for extended periods.',
+    shortDescription: 'Long-distance driving with extended sitting.',
     risks: [
       {
         title: 'Hip Stiffness',

@@ -118,7 +118,7 @@ function ExerciseIllustration({
     illustrationType ?? illustrationTypeByExerciseName[exerciseName]
 
   return (
-    <div className="flex h-28 w-full items-center justify-center rounded-lg border border-dashed border-teal-300 bg-teal-50 px-6 text-teal-800 sm:h-32">
+    <div className="flex h-24 w-full items-center justify-center rounded-lg border border-dashed border-teal-300 bg-teal-50 px-6 text-teal-800 md:h-32">
       {resolvedType && <IconIllustration illustrationType={resolvedType} />}
       {!resolvedType && <PlaceholderIllustration exerciseName={exerciseName} />}
     </div>

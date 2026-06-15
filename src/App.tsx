@@ -46,7 +46,7 @@ function App() {
             <h2 className="text-xl font-semibold tracking-tight text-slate-950">
               {occupation.name}
             </h2>
-            <p className="occupation-card-description mt-2 leading-7 text-slate-600 md:mt-3">
+            <p className="mt-2 leading-7 text-slate-600 md:mt-3">
               {occupation.shortDescription}
             </p>
           </button>
@@ -63,21 +63,21 @@ function App() {
           </h2>
         </div>
 
-        <div className="mt-8 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="mt-6 grid gap-6 md:mt-8 md:gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
               Common Risks
             </h3>
-            <div className="mt-4 space-y-3">
+            <div className="mt-3 space-y-2 md:mt-4 md:space-y-3">
               {selectedOccupation.risks.map((risk) => (
                 <article
-                  className="rounded-lg border border-slate-200 bg-slate-50 p-4"
+                  className="rounded-lg border border-slate-200 bg-slate-50 p-3 md:p-4"
                   key={risk.title}
                 >
                   <h4 className="font-semibold text-slate-950">
                     {risk.title}
                   </h4>
-                  <p className="mt-2 leading-7 text-slate-600">
+                  <p className="mt-1.5 text-sm leading-6 text-slate-600 md:mt-2 md:text-base md:leading-7">
                     {risk.description}
                   </p>
                 </article>
@@ -89,7 +89,7 @@ function App() {
             <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
               Recommended Exercises
             </h3>
-            <div className="mt-4 space-y-3">
+            <div className="mt-3 space-y-2 md:mt-4 md:space-y-3">
               {selectedOccupation.exercises.map((exercise) => (
                 <article
                   className="overflow-hidden rounded-lg border border-slate-200"
@@ -114,11 +114,11 @@ function App() {
                   </button>
 
                   {exercise.name === expandedExerciseName && (
-                    <div className="space-y-6 px-4 py-5 text-slate-700 sm:px-5">
+                    <div className="space-y-4 px-3 py-4 text-slate-700 sm:px-5 md:space-y-6 md:px-4 md:py-5">
                       <ExerciseIllustration exerciseName={exercise.name} />
 
-                      <div className="grid gap-4 sm:grid-cols-[0.45fr_1fr]">
-                        <div className="rounded-lg bg-slate-50 p-4">
+                      <div className="grid gap-3 md:gap-4 sm:grid-cols-[0.45fr_1fr]">
+                        <div className="rounded-lg bg-slate-50 p-3 md:p-4">
                           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
                             Duration
                           </p>
@@ -126,7 +126,7 @@ function App() {
                             {exercise.duration}
                           </p>
                         </div>
-                        <div className="rounded-lg bg-slate-50 p-4">
+                        <div className="rounded-lg bg-slate-50 p-3 md:p-4">
                           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
                             Benefit
                           </p>
@@ -134,7 +134,7 @@ function App() {
                         </div>
                       </div>
 
-                      <div className="rounded-lg bg-slate-50 p-4">
+                      <div className="rounded-lg bg-slate-50 p-3 md:p-4">
                         <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">
                           Step-by-step instructions
                         </p>
