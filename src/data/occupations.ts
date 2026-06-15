@@ -27,24 +27,24 @@ export const occupations: Occupation[] = [
       {
         title: 'Neck Stiffness',
         description:
-          'Long periods of screen work and poor posture can lead to neck tension.',
+          'Looking at a screen for a long time can make your neck feel tight.',
       },
       {
         title: 'Lower Back Pain',
         description:
-          'Extended sitting may contribute to lower back discomfort.',
+          'Sitting for a long time can make your lower back feel sore.',
       },
       {
-        title: 'Eye Strain',
+        title: 'Tired Eyes',
         description:
-          'Reviewing spreadsheets and reports for long periods can fatigue the eyes.',
+          'Reading spreadsheets and reports for hours can give you tired eyes.',
       },
     ],
     exercises: [
       {
         name: 'Chin Tucks',
         duration: '1 minute',
-        benefit: 'Helps improve posture and reduce neck stiffness.',
+        benefit: 'Helps you sit taller and eases a stiff neck.',
         instructions: [
           'Sit upright.',
           'Pull your chin straight back.',
@@ -54,7 +54,7 @@ export const occupations: Occupation[] = [
       {
         name: 'Seated Back Stretch',
         duration: '2 minutes',
-        benefit: 'Relieves tension in the lower back.',
+        benefit: 'Helps loosen a sore lower back.',
         instructions: [
           'Sit upright.',
           'Reach forward and gently round your back.',
@@ -64,7 +64,7 @@ export const occupations: Occupation[] = [
       {
         name: '20-20-20 Eye Break',
         duration: '20 seconds',
-        benefit: 'Reduces eye fatigue from screen use.',
+        benefit: 'Helps tired eyes from screen time.',
         instructions: [
           'Every 20 minutes.',
           'Look at something 20 feet away.',
@@ -76,41 +76,41 @@ export const occupations: Occupation[] = [
   {
     id: 'chef',
     name: 'Chef',
-    shortDescription: 'Kitchen work with standing and repetitive tasks.',
+    shortDescription: 'Kitchen work with standing and repeated tasks.',
     risks: [
       {
-        title: 'Wrist Strain',
+        title: 'Sore Wrists',
         description:
-          'Chopping, stirring, and prep work can stress the wrists and forearms.',
+          'Chopping and stirring for hours can make your wrists and arms sore.',
       },
       {
-        title: 'Lower Back Fatigue',
+        title: 'Tired Lower Back',
         description:
-          'Standing for long kitchen shifts can tire the lower back.',
+          'Standing for long shifts can make your lower back feel tired.',
       },
       {
         title: 'Shoulder Tightness',
         description:
-          'Repetitive prep and reaching can build tension around the shoulders.',
+          'Doing the same prep work for hours can make your shoulders tight.',
       },
     ],
     exercises: [
       {
         name: 'Forearm Stretches',
         duration: '2 minutes',
-        benefit: 'Eases wrist and forearm strain from chopping and prep work.',
+        benefit: 'Helps sore wrists and arms after chopping and prep work.',
         instructions: [
           'Extend one arm forward with the palm down.',
-          'Use the other hand to gently bend the wrist downward.',
+          'Use your other hand to gently bend your wrist down.',
           'Hold for 20 seconds, then switch sides.',
         ],
       },
       {
         name: 'Hamstring Stretches',
         duration: '2 minutes',
-        benefit: 'Helps reduce lower back fatigue after standing.',
+        benefit: 'Helps your lower back feel better after standing.',
         instructions: [
-          'Place one heel on a low stable surface.',
+          'Place one heel on a low, steady surface.',
           'Keep your back straight and hinge slightly at the hips.',
           'Hold for 20 seconds, then switch legs.',
         ],
@@ -118,7 +118,7 @@ export const occupations: Occupation[] = [
       {
         name: 'Shoulder Rolls',
         duration: '1 minute',
-        benefit: 'Releases shoulder tightness from repetitive kitchen tasks.',
+        benefit: 'Helps loosen tight shoulders after kitchen work.',
         instructions: [
           'Stand tall with your arms relaxed at your sides.',
           'Roll your shoulders slowly backward five times.',
@@ -133,36 +133,36 @@ export const occupations: Occupation[] = [
     shortDescription: 'Clinical work with long shifts and patient care.',
     risks: [
       {
-        title: 'Lower Back Strain',
+        title: 'Sore Lower Back',
         description:
-          'Patient lifting and awkward positioning can overload the lower back.',
+          'Lifting and helping patients can make your lower back sore.',
       },
       {
-        title: 'Leg Fatigue',
+        title: 'Tired Legs',
         description:
-          'Long shifts on hard floors can leave legs tired and circulation sluggish.',
+          'Long shifts on hard floors can leave your legs tired.',
       },
       {
-        title: 'Shoulder Tension',
+        title: 'Tight Shoulders',
         description:
-          'Patient handling and repeated reaching can tighten the shoulders.',
+          'Helping patients and reaching often can make your shoulders tight.',
       },
     ],
     exercises: [
       {
         name: 'Hip Flexor Stretches',
         duration: '2 minutes',
-        benefit: 'Eases hip tightness from walking, lifting, and long shifts.',
+        benefit: 'Helps loosen tight hips after walking and long shifts.',
         instructions: [
-          'Step one foot forward into a short lunge stance.',
-          'Keep your torso upright and gently shift weight forward.',
+          'Step one foot forward into a small lunge.',
+          'Keep your upper body upright and gently shift weight forward.',
           'Hold for 20 seconds, then switch sides.',
         ],
       },
       {
         name: 'Calf Raises',
         duration: '1 minute',
-        benefit: 'Supports circulation and reduces lower-leg fatigue.',
+        benefit: 'Helps tired lower legs feel better.',
         instructions: [
           'Stand near a wall or counter for balance.',
           'Rise onto the balls of your feet.',
@@ -172,10 +172,10 @@ export const occupations: Occupation[] = [
       {
         name: 'Gentle Back Extensions',
         duration: '1 minute',
-        benefit: 'Helps counter forward bending and lower back strain.',
+        benefit: 'Helps your lower back after bending forward.',
         instructions: [
           'Stand with your hands resting on your lower back.',
-          'Gently lean backward within a comfortable range.',
+          'Gently lean back only as far as feels comfortable.',
           'Return to neutral and repeat slowly.',
         ],
       },
@@ -189,34 +189,34 @@ export const occupations: Occupation[] = [
       {
         title: 'Neck Pain',
         description:
-          'Common neck and shoulder tension from prolonged sitting and screen focus.',
+          'Sitting and looking at a screen for hours can make your neck sore.',
       },
       {
-        title: 'Eye Strain',
+        title: 'Tired Eyes',
         description:
-          'Visual fatigue from long periods of close screen work and reduced blinking.',
+          'Long screen time and less blinking can lead to tired eyes.',
       },
       {
-        title: 'Wrist Discomfort',
+        title: 'Sore Wrists',
         description:
-          'Repetitive typing and mouse use can irritate the wrists and forearms.',
+          'Typing and using a mouse for hours can make your wrists sore.',
       },
     ],
     exercises: [
       {
         name: 'Chin Tucks',
         duration: '1 minute',
-        benefit: 'Helps reduce forward-head posture and neck tension.',
+        benefit: 'Helps your neck feel better after screen time.',
         instructions: [
-          'Sit tall with your shoulders relaxed.',
-          'Gently draw your chin straight back without tilting your head.',
+          'Sit tall and relax your shoulders.',
+          'Gently pull your chin straight back without tilting your head.',
           'Hold for 3 seconds, then release and repeat.',
         ],
       },
       {
         name: 'Wrist Flexor Stretches',
         duration: '2 minutes',
-        benefit: 'Relieves tightness from typing and mouse use.',
+        benefit: 'Helps loosen tight wrists from typing and mouse use.',
         instructions: [
           'Extend one arm forward with your palm facing up.',
           'Use your other hand to gently pull the fingers back.',
@@ -226,10 +226,10 @@ export const occupations: Occupation[] = [
       {
         name: 'Screen Break Eye Focusing',
         duration: '1 minute',
-        benefit: 'Reduces eye fatigue from sustained screen time.',
+        benefit: 'Helps tired eyes from long screen time.',
         instructions: [
           'Look at an object about 20 feet away.',
-          'Keep your gaze relaxed for 20 seconds.',
+          'Look at it calmly for 20 seconds.',
           'Blink slowly several times before returning to the screen.',
         ],
       },
@@ -241,36 +241,36 @@ export const occupations: Occupation[] = [
     shortDescription: 'Classroom work with standing, speaking, and planning.',
     risks: [
       {
-        title: 'Voice Strain',
+        title: 'Tired Voice',
         description:
-          'Frequent speaking over classroom noise can fatigue the voice.',
+          'Talking for long periods can make your voice tired.',
       },
       {
-        title: 'Foot Fatigue',
+        title: 'Sore Feet',
         description:
-          'Standing through lessons can create soreness in the feet and calves.',
+          'Standing during lessons can make your feet and calves sore.',
       },
       {
         title: 'Upper Back Tightness',
         description:
-          'Desk work, grading, and leaning forward can tighten the upper back.',
+          'Grading and leaning forward can make your upper back tight.',
       },
     ],
     exercises: [
       {
         name: 'Diaphragmatic Breathing',
         duration: '2 minutes',
-        benefit: 'Supports voice control and reduces throat strain.',
+        benefit: 'Helps your voice feel less tired.',
         instructions: [
-          'Sit or stand with one hand on your abdomen.',
-          'Inhale through your nose and let your abdomen expand.',
+          'Sit or stand with one hand on your belly.',
+          'Breathe in through your nose and let your belly expand.',
           'Exhale slowly while keeping your shoulders relaxed.',
         ],
       },
       {
         name: 'Standing Calf Stretches',
         duration: '2 minutes',
-        benefit: 'Relieves lower-leg tension from standing in class.',
+        benefit: 'Helps sore lower legs from standing.',
         instructions: [
           'Place both hands against a wall.',
           'Step one foot back and press the heel toward the floor.',
@@ -280,7 +280,7 @@ export const occupations: Occupation[] = [
       {
         name: 'Scapular Squeezes',
         duration: '1 minute',
-        benefit: 'Reduces upper back tightness from grading and desk work.',
+        benefit: 'Helps loosen a tight upper back.',
         instructions: [
           'Sit or stand tall with arms relaxed.',
           'Gently squeeze your shoulder blades together.',
@@ -292,29 +292,29 @@ export const occupations: Occupation[] = [
   {
     id: 'truck-driver',
     name: 'Truck Driver',
-    shortDescription: 'Long-distance driving with extended sitting.',
+    shortDescription: 'Long-distance driving with lots of sitting.',
     risks: [
       {
         title: 'Hip Stiffness',
         description:
-          'Extended sitting can shorten hip flexors and limit comfortable movement.',
+          'Sitting for a long time can make your hips feel stiff.',
       },
       {
-        title: 'Lower Back Discomfort',
+        title: 'Sore Lower Back',
         description:
-          'Long driving periods can place sustained pressure on the lower back.',
+          'Driving for hours can make your lower back sore.',
       },
       {
-        title: 'Poor Leg Circulation',
+        title: 'Heavy Legs',
         description:
-          'Remaining seated for hours can slow circulation through the legs.',
+          'Sitting for hours can make your legs feel heavy or tired.',
       },
     ],
     exercises: [
       {
         name: 'Seated Spinal Twists',
         duration: '1 minute',
-        benefit: 'Improves back mobility after long periods of sitting.',
+        benefit: 'Helps your back move better after sitting.',
         instructions: [
           'Sit tall with both feet on the floor.',
           'Place one hand on the opposite thigh and gently rotate.',
@@ -324,17 +324,17 @@ export const occupations: Occupation[] = [
       {
         name: 'Hip Flexor Stretches',
         duration: '2 minutes',
-        benefit: 'Reduces hip stiffness caused by extended driving.',
+        benefit: 'Helps loosen stiff hips after driving.',
         instructions: [
-          'Stand in a short lunge stance during a safe stop.',
-          'Keep your torso upright and shift your hips forward gently.',
+          'Stand in a small lunge during a safe stop.',
+          'Keep your upper body upright and shift your hips forward gently.',
           'Hold for 20 seconds, then switch sides.',
         ],
       },
       {
         name: 'Ankle Pumps',
         duration: '1 minute',
-        benefit: 'Encourages circulation in the lower legs.',
+        benefit: 'Helps your lower legs feel less heavy.',
         instructions: [
           'Sit with both feet on the floor.',
           'Lift your toes up while keeping heels down.',
