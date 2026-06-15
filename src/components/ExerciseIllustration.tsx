@@ -43,20 +43,20 @@ type ExerciseIllustrationProps = {
 
 const illustrationTypeByExerciseName: Record<string, IllustrationType> = {
   'Chin Tucks': 'chin-tucks',
-  'Wrist Flexor Stretches': 'wrist-flexor-stretches',
+  'Wrist Stretches': 'wrist-flexor-stretches',
   'Screen Break Eye Focusing': 'eye-focusing',
   '20-20-20 Eye Break': 'eye-focusing',
-  'Hip Flexor Stretches': 'hip-flexor-stretches',
+  'Hip Stretches': 'hip-flexor-stretches',
   'Calf Raises': 'calf-raises',
   'Gentle Back Extensions': 'back-extensions',
   'Seated Back Stretch': 'seated-back-stretch',
-  'Diaphragmatic Breathing': 'diaphragmatic-breathing',
+  'Belly Breathing': 'diaphragmatic-breathing',
   'Standing Calf Stretches': 'calf-stretches',
-  'Scapular Squeezes': 'scapular-squeezes',
-  'Forearm Stretches': 'forearm-stretches',
+  'Shoulder Blade Squeezes': 'scapular-squeezes',
+  'Arm Stretches': 'forearm-stretches',
   'Hamstring Stretches': 'hamstring-stretches',
   'Shoulder Rolls': 'shoulder-rolls',
-  'Seated Spinal Twists': 'spinal-twists',
+  'Seated Back Twists': 'spinal-twists',
   'Ankle Pumps': 'ankle-pumps',
 }
 

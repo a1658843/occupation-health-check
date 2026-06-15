@@ -1,3 +1,5 @@
+import softwareEngineerHero from '../assets/software-engineer-hero.png'
+
 export type Exercise = {
   name: string
   duration: string
@@ -14,6 +16,7 @@ export type Occupation = {
   id: string
   name: string
   shortDescription: string
+  heroImage: string
   risks: Risk[]
   exercises: Exercise[]
 }
@@ -22,7 +25,8 @@ export const occupations: Occupation[] = [
   {
     id: 'accountant',
     name: 'Accountant',
-    shortDescription: 'Desk-based financial work with reports and spreadsheets.',
+    shortDescription: 'Desk work with reports and spreadsheets.',
+    heroImage: softwareEngineerHero,
     risks: [
       {
         title: 'Neck Stiffness',
@@ -77,6 +81,7 @@ export const occupations: Occupation[] = [
     id: 'chef',
     name: 'Chef',
     shortDescription: 'Kitchen work with standing and repeated tasks.',
+    heroImage: softwareEngineerHero,
     risks: [
       {
         title: 'Sore Wrists',
@@ -96,7 +101,7 @@ export const occupations: Occupation[] = [
     ],
     exercises: [
       {
-        name: 'Forearm Stretches',
+        name: 'Arm Stretches',
         duration: '2 minutes',
         benefit: 'Helps sore wrists and arms after chopping and prep work.',
         instructions: [
@@ -131,6 +136,7 @@ export const occupations: Occupation[] = [
     id: 'nurse',
     name: 'Nurse',
     shortDescription: 'Clinical work with long shifts and patient care.',
+    heroImage: softwareEngineerHero,
     risks: [
       {
         title: 'Sore Lower Back',
@@ -150,7 +156,7 @@ export const occupations: Occupation[] = [
     ],
     exercises: [
       {
-        name: 'Hip Flexor Stretches',
+        name: 'Hip Stretches',
         duration: '2 minutes',
         benefit: 'Helps loosen tight hips after walking and long shifts.',
         instructions: [
@@ -176,7 +182,7 @@ export const occupations: Occupation[] = [
         instructions: [
           'Stand with your hands resting on your lower back.',
           'Gently lean back only as far as feels comfortable.',
-          'Return to neutral and repeat slowly.',
+          'Stand tall again and repeat slowly.',
         ],
       },
     ],
@@ -185,6 +191,7 @@ export const occupations: Occupation[] = [
     id: 'software-engineer',
     name: 'Software Engineer',
     shortDescription: 'Desk-based computer work for long hours.',
+    heroImage: softwareEngineerHero,
     risks: [
       {
         title: 'Neck Pain',
@@ -214,12 +221,12 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Wrist Flexor Stretches',
+        name: 'Wrist Stretches',
         duration: '2 minutes',
         benefit: 'Helps loosen tight wrists from typing and mouse use.',
         instructions: [
           'Extend one arm forward with your palm facing up.',
-          'Use your other hand to gently pull the fingers back.',
+          'Use your other hand to gently pull your fingers back.',
           'Hold for 20 seconds, then switch sides.',
         ],
       },
@@ -239,6 +246,7 @@ export const occupations: Occupation[] = [
     id: 'teacher',
     name: 'Teacher',
     shortDescription: 'Classroom work with standing, speaking, and planning.',
+    heroImage: softwareEngineerHero,
     risks: [
       {
         title: 'Tired Voice',
@@ -258,7 +266,7 @@ export const occupations: Occupation[] = [
     ],
     exercises: [
       {
-        name: 'Diaphragmatic Breathing',
+        name: 'Belly Breathing',
         duration: '2 minutes',
         benefit: 'Helps your voice feel less tired.',
         instructions: [
@@ -278,7 +286,7 @@ export const occupations: Occupation[] = [
         ],
       },
       {
-        name: 'Scapular Squeezes',
+        name: 'Shoulder Blade Squeezes',
         duration: '1 minute',
         benefit: 'Helps loosen a tight upper back.',
         instructions: [
@@ -293,6 +301,7 @@ export const occupations: Occupation[] = [
     id: 'truck-driver',
     name: 'Truck Driver',
     shortDescription: 'Long-distance driving with lots of sitting.',
+    heroImage: softwareEngineerHero,
     risks: [
       {
         title: 'Hip Stiffness',
@@ -312,17 +321,17 @@ export const occupations: Occupation[] = [
     ],
     exercises: [
       {
-        name: 'Seated Spinal Twists',
+        name: 'Seated Back Twists',
         duration: '1 minute',
         benefit: 'Helps your back move better after sitting.',
         instructions: [
           'Sit tall with both feet on the floor.',
-          'Place one hand on the opposite thigh and gently rotate.',
+          'Place one hand on the opposite thigh and gently turn your upper body.',
           'Hold briefly, return to center, and switch sides.',
         ],
       },
       {
-        name: 'Hip Flexor Stretches',
+        name: 'Hip Stretches',
         duration: '2 minutes',
         benefit: 'Helps loosen stiff hips after driving.',
         instructions: [

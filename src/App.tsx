@@ -1,6 +1,21 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ExerciseIllustration from './components/ExerciseIllustration'
 import { occupations } from './data/occupations'
+import accountantImage from './assets/hero/accountant.png'
+import chefImage from './assets/hero/chef.png'
+import nurseImage from './assets/hero/nurse.png'
+import softwareEngineerImage from './assets/hero/software-engineer.png'
+import teacherImage from './assets/hero/teacher.png'
+import truckDriverImage from './assets/hero/truck-driver.png'
+
+const occupationHeroImages: Record<string, string> = {
+  Accountant: accountantImage,
+  'Software Engineer': softwareEngineerImage,
+  Nurse: nurseImage,
+  Teacher: teacherImage,
+  Chef: chefImage,
+  'Truck Driver': truckDriverImage,
+}
 
 function App() {
   const [selectedOccupationId, setSelectedOccupationId] = useState<
@@ -14,6 +29,9 @@ function App() {
   const selectedOccupation = occupations.find(
     (occupation) => occupation.id === selectedOccupationId,
   )
+  const selectedOccupationImage = selectedOccupation
+    ? occupationHeroImages[selectedOccupation.name] ?? softwareEngineerImage
+    : null
   const normalizedSearchQuery = searchQuery.trim().toLowerCase()
   const matchingOccupations = normalizedSearchQuery
     ? occupations.filter((occupation) =>
@@ -34,18 +52,26 @@ function App() {
     )
     .filter((occupation) => occupation !== undefined)
 
+  const healthTipsTitleByOccupation: Record<string, string> = {
+    Accountant: 'Health Tips for Accountants',
+    Chef: 'Health Tips for Chefs',
+    Nurse: 'Health Tips for Nurses',
+    'Software Engineer': 'Health Tips for Software Engineers',
+    Teacher: 'Health Tips for Teachers',
+    'Truck Driver': 'Health Tips for Truck Drivers',
+  }
+
   const handleOccupationSelect = (occupation: (typeof occupations)[number]) => {
     setSelectedOccupationId(occupation.id)
     setExpandedExerciseName('')
-    if (window.matchMedia('(max-width: 767px)').matches) {
-      requestAnimationFrame(() => {
-        detailsSectionRef.current?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        })
-      })
-    }
   }
+
+  useEffect(() => {
+    Object.values(occupationHeroImages).forEach((heroImage) => {
+      const image = new Image()
+      image.src = heroImage
+    })
+  }, [])
 
   const handleClearSelection = () => {
     setSelectedOccupationId(null)
@@ -65,18 +91,14 @@ function App() {
         className="mx-auto max-w-3xl scroll-mt-6 text-center"
         ref={heroSectionRef}
       >
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700 md:mb-4">
-          Occupation Health Check
-        </p>
         <h1 className="text-3xl font-bold tracking-tight md:text-5xl">
-          Find simple stretches for your job
+          Body Relief for Every Job
         </h1>
         <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-slate-600 md:mt-6 md:text-lg md:leading-8">
-          Choose your occupation to see common sore spots and quick preventive
-          exercises.
+          Find stretches that help prevent neck, back, wrist, and eye strain.
         </p>
 
-        <div className="relative mt-4 md:mt-6">
+        <div className="relative mx-auto mt-4 max-w-[720px] md:mt-6">
           <label className="sr-only" htmlFor="occupation-search">
             Search your occupation
           </label>
@@ -84,7 +106,7 @@ function App() {
             className="w-full rounded-lg border border-slate-200 bg-white px-5 py-4 text-base text-slate-950 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-teal-600 focus:ring-2 focus:ring-teal-600"
             id="occupation-search"
             onChange={(event) => setSearchQuery(event.target.value)}
-            placeholder="Search your occupation..."
+            placeholder="What do you do for work?"
             type="search"
             value={searchQuery}
           />
@@ -125,44 +147,69 @@ function App() {
         </div>
       </section>
 
-      <section className="mx-auto mt-6 max-w-3xl md:mt-8">
-        <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
-            Popular occupations
-          </h3>
-          <div className="mt-3 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
-            {popularOccupations.map((occupation) => (
-              <button
-                aria-pressed={occupation.id === selectedOccupationId}
-                className={`rounded-lg border bg-white px-4 py-3 text-left font-semibold shadow-sm transition duration-200 md:hover:-translate-y-[3px] md:hover:border-teal-300 md:hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 ${
-                  occupation.id === selectedOccupationId
-                    ? 'border-teal-600 ring-2 ring-teal-600 ring-offset-2'
-                    : 'border-slate-200'
-                }`}
-                key={occupation.id}
-                onClick={() => handleOccupationSelect(occupation)}
-                type="button"
-              >
-                {occupation.name}
-              </button>
-            ))}
+      {!selectedOccupation && (
+        <section className="mx-auto mt-6 max-w-3xl md:mt-8">
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
+              Popular occupations
+            </h3>
+            <div className="mt-3 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
+              {popularOccupations.map((occupation) => (
+                <button
+                  aria-pressed={occupation.id === selectedOccupationId}
+                  className={`rounded-lg border bg-white px-4 py-3 text-left font-semibold shadow-sm transition duration-200 md:hover:-translate-y-[3px] md:hover:border-teal-300 md:hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 ${
+                    occupation.id === selectedOccupationId
+                      ? 'border-teal-600 ring-2 ring-teal-600 ring-offset-2'
+                      : 'border-slate-200'
+                  }`}
+                  key={occupation.id}
+                  onClick={() => handleOccupationSelect(occupation)}
+                  type="button"
+                >
+                  {occupation.name}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {selectedOccupation && (
-        <section
-          className="mx-auto mt-10 max-w-6xl scroll-mt-6 rounded-lg border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
-          ref={detailsSectionRef}
-        >
+        <>
+          {selectedOccupation && (
+            <div className="mx-auto mt-4 flex max-w-3xl justify-center md:mt-6">
+              <div className="relative min-h-[220px] w-full max-w-[440px] overflow-hidden rounded-lg shadow-sm md:min-h-[260px]">
+                {Object.entries(occupationHeroImages).map(
+                  ([occupationName, occupationImage]) => (
+                    <img
+                      alt={`${occupationName} stretching at work`}
+                      className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-200 ease-in-out ${
+                        occupationImage === selectedOccupationImage
+                          ? 'opacity-100'
+                          : 'opacity-0'
+                      }`}
+                      key={occupationName}
+                      src={occupationImage}
+                    />
+                  ),
+                )}
+              </div>
+            </div>
+          )}
+
+          <section
+            className="mx-auto mt-6 max-w-6xl scroll-mt-6 rounded-lg border border-slate-200 bg-white p-6 shadow-sm sm:p-8 md:mt-8"
+            ref={detailsSectionRef}
+          >
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
-                Workplace risks and preventive exercises
-              </p>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
-                Results for {selectedOccupation.name}
-              </h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
+              Sore spots and simple stretches
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">
+              {healthTipsTitleByOccupation[selectedOccupation.name] ??
+                `Health Tips for ${selectedOccupation.name}s`}
+            </h2>
             </div>
             <button
               className="self-start rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:border-teal-300 hover:text-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2"
@@ -176,7 +223,7 @@ function App() {
           <div className="mt-6 grid gap-6 md:mt-8 md:gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
-                Common Risks
+                Common Sore Spots
               </h3>
               <div className="mt-3 space-y-2 md:mt-4 md:space-y-3">
                 {selectedOccupation.risks.map((risk) => (
@@ -197,7 +244,7 @@ function App() {
 
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
-                Recommended Exercises
+                Simple Stretches
               </h3>
               <div className="mt-3 space-y-2 md:mt-4 md:space-y-3">
                 {selectedOccupation.exercises.map((exercise) => (
@@ -265,7 +312,8 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+          </section>
+        </>
       )}
 
       <section className="mx-auto mt-10 max-w-6xl rounded-lg border border-teal-200 bg-teal-50 p-6 text-center shadow-sm sm:p-8">
@@ -274,7 +322,7 @@ function App() {
         </h2>
         <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-700">
           Help us decide which occupations to add next. Suggest an occupation
-          and share common physical issues associated with it.
+          and share common sore spots that come with it.
         </p>
         <a
           className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-teal-700 px-5 py-3 font-semibold text-white shadow-sm transition hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-teal-700 focus:ring-offset-2 sm:w-auto"
